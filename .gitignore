@@ -1,0 +1,22 @@
+#ignore audio files
+audio
+uploads
+#ignore trash
+main.py
+get-start.py
+__pycache__/
+*.pyc
+trais.log
+*.tar
+.dockerignore
+models
+Gemma*
+*.txt
+*.gguf
+*.log
+*.sh
+raw
+tasks/
+
+#ignore env and secrets
+.env

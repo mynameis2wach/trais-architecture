@@ -6,7 +6,7 @@
 | Container | Technology | Responsibility |
 |-----------|------------|----------------|
 | Web Application | React, TypeScript | User interface for search and meeting upload |
-| API Gateway | Python, FastAPI | Orchestrates all requests, hybrid search, RAG context building |
+| Backend API | Python, FastAPI | Orchestrates all requests, hybrid search, RAG context building |
 | Ingestion Worker | Python | Diarization, transcription, chunking, embedding |
 | PostgreSQL | PostgreSQL 15 | Structured data: raw transcripts, metadata, speaker records |
 | Qdrant | Qdrant | Vector store: chunk embeddings, summary vectors, voice signatures |
@@ -21,7 +21,7 @@
 flowchart LR
     user["👤 User (Browser)"]
     web["🌐 Web Application (React)"]
-    api["⚙️ API Gateway (FastAPI)"]
+    api["⚙️ Backend API (FastAPI)"]
     worker["⚙️ Ingestion Worker"]
     postgres[("🗄️ PostgreSQL")]
     qdrant[("🔍 Qdrant")]

@@ -8,14 +8,19 @@ TRAIS как целостная система взаимодействует с
 
 ```mermaid
 flowchart LR
-    user["👤 User"]
+    user["👤 Пользователь"]
     trais["TRAIS — RAG pipeline"]
+    ai["Внешние/Локальные ИИ-сервисы<br/>: Pyannote, Whisper, Embedder, LLM"]
 
-    user -->|"Uses (HTTPS)"| trais
+    user -->|"HTTPS: аудио, голос, вопросы"| trais
+    trais -.->|"ASR, диаризация, эмбеддинги"| ai
 
     classDef person fill:#08427B,color:#fff,stroke:#052E56
     classDef system fill:#1168BD,color:#fff,stroke:#0B4880
+    classDef external fill:#777,color:#fff,stroke:#555,stroke-dasharray: 5 5
+
     class user person
     class trais system
+    class ai external
 ```
 В полностью локальной установке все ИИ-компоненты работают внутри границ системы, поэтому внешним является только пользователь

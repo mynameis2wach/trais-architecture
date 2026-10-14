@@ -10,7 +10,7 @@ Large companies accumulate thousands of hours of meetings. The information insid
 ## Architectural principles
 - **Locality** — no data leaves the company perimeter.
 - **Storage separation** — structured data is kept apart from vector data (see [ADR-001](docs/eng/architecture/decisions/adr-001-split-storage.md)).
-- **Hybrid search** — combines semantics and exact filters in a single query ([ADR-001](docs/eng/architecture/decisions/adr-004-hybrid-search.md)).
+- **Hybrid search** — combines semantics and exact filters in a single query ([ADR-004](docs/eng/architecture/decisions/adr-004-hybrid-search.md)).
 
 ## Key technologies
 Pyannote, Whisper, Qdrant, PostgreSQL, Text/Audio Embedder, local LLM.
